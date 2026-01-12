@@ -1,304 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Ezequiel Falca — Backend Developer (Java & Spring Boot)</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ezequiel Falca – Backend Developer (Java & Spring Boot)</title>
+
     <style>
-      :root {
-        --bg: #ffffff;
-        --text: #1f2937;
-        --muted: #6b7280;
-        --accent: #2563eb;
-        --card: #f8fafc;
-      }
-      html,
       body {
-        height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #ffffff;
+        color: #111827;
+        line-height: 1.5;
         margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family: Inter, Roboto, "Segoe UI", Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        line-height: 1.4;
-      }
-      .container {
-        max-width: 920px;
-        margin: 28px auto;
-        padding: 26px;
-        border-radius: 12px;
-        box-shadow: 0 8px 30px rgba(2, 6, 23, 0.06);
-        background: white;
-      }
-      header {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .avatar {
-        width: 88px;
-        height: 88px;
-        border-radius: 12px;
-        background: #eef2ff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-      }
-      .avatar img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-      h1 {
-        margin: 0;
-        font-size: 22px;
-      }
-      .subtitle {
-        margin-top: 4px;
-        font-weight: 600;
-        color: var(--muted);
-      }
-      .lead {
-        margin: 8px 0 0;
-        color: var(--muted);
-      }
-      .meta {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-top: 12px;
-      }
-      .meta a,
-      .meta span {
-        color: var(--text);
-        text-decoration: none;
-        padding: 6px 10px;
-        border-radius: 10px;
-        background: var(--card);
-        font-size: 13px;
-      }
-      .two-col {
-        display: grid;
-        grid-template-columns: 1fr 320px;
-        gap: 20px;
-        margin-top: 18px;
-      }
-      .card {
-        background: #fff;
-        padding: 14px;
-        border-radius: 10px;
-        border: 1px solid #eef2f6;
-      }
-      h2 {
-        margin: 0 0 10px;
-        font-size: 16px;
-      }
-      .tech-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-      .tech {
-        padding: 7px 10px;
-        border-radius: 10px;
-        background: var(--card);
-        font-size: 13px;
-      }
-      ul.clean {
         padding: 0;
-        margin: 0;
-        list-style: none;
       }
-      .projects .project {
-        padding: 12px;
-        border-radius: 10px;
-        border: 1px solid #f3f4f6;
-        margin-bottom: 12px;
+
+      .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 40px;
       }
-      .project h3 {
-        margin: 0 0 6px;
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 4px;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin-top: 28px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 4px;
+      }
+
+      h3 {
         font-size: 15px;
+        margin-top: 16px;
+        margin-bottom: 4px;
       }
-      .project p {
-        margin: 0 0 8px;
-        color: var(--muted);
+
+      p {
+        margin: 4px 0;
         font-size: 14px;
       }
-      .links a {
-        color: var(--accent);
-        text-decoration: none;
-        font-size: 13px;
+
+      ul {
+        margin: 6px 0 0 18px;
+        padding: 0;
+        font-size: 14px;
       }
-      .core {
-        margin-top: 10px;
-        color: var(--muted);
-        font-size: 13px;
+
+      li {
+        margin-bottom: 4px;
       }
-      footer {
-        margin-top: 18px;
-        font-size: 13px;
-        color: var(--muted);
+
+      .header p {
+        font-size: 14px;
+      }
+
+      .contact {
+        margin-top: 6px;
+        font-size: 14px;
+      }
+
+      .section {
+        margin-top: 20px;
+      }
+
+      .muted {
+        color: #4b5563;
+      }
+
+      .footer {
+        margin-top: 40px;
+        font-size: 12px;
+        color: #6b7280;
         text-align: center;
-      }
-      @media (max-width: 880px) {
-        .two-col {
-          grid-template-columns: 1fr;
-        }
-        .avatar {
-          width: 72px;
-          height: 72px;
-        }
       }
     </style>
   </head>
+
   <body>
-    <div class="container" role="main">
-      <header>
-        <div class="avatar">
-          <img
-            src="icons/avatar.png"
-            alt="Ezequiel Falca"
-            onerror="this.style.display='none'"
-          />
-        </div>
-        <div style="flex: 1; min-width: 220px">
-          <h1>Ezequiel Falca</h1>
-          <div class="subtitle">Backend Developer — Java & Spring Boot</div>
-          <p class="lead">
-            Backend developer especializado en <strong>Java 17</strong> y
-            <strong>Spring Boot</strong>. Experiencia en diseño de REST APIs,
-            seguridad con JWT, WebSockets y migraciones de base de datos con
-            Flyway. Implementé pipelines CI/CD usando GitHub Actions y
-            despliegue en la nube (Docker). Interesado en aportar valor en
-            equipos backend y seguir desarrollando habilidades en sistemas
-            Java/Spring Boot.
-          </p>
-          <div class="meta">
-            <span>📍 Argentina</span>
-            <span>🌐 Disponibilidad: Remoto</span>
-            <a href="mailto:zkcoding99@gmail.com">✉️ zkcoding99@gmail.com</a>
-            <a href="https://github.com/zuxercoding99">💻 GitHub</a>
-            <a href="https://www.linkedin.com/in/ezequiel-zk993213/"
-              >LinkedIn</a
-            >
-          </div>
-          <div class="core">
-            Core competencies: Java, Spring Boot, REST APIs, PostgreSQL, Docker,
-            CI/CD (GitHub Actions), Flyway, JWT, WebSockets
-          </div>
+    <main class="container">
+      <!-- HEADER -->
+      <header class="header">
+        <h1>Ezequiel Falca</h1>
+        <p><strong>Backend Developer – Java & Spring Boot</strong></p>
+
+        <div class="contact">
+          <p>Argentina | Available Remote</p>
+          <p>Email: zkcoding99@gmail.com</p>
+          <p>GitHub: https://github.com/zuxercoding99</p>
+          <p>LinkedIn: https://www.linkedin.com/in/ezequiel-zk993213/</p>
         </div>
       </header>
 
-      <div class="two-col">
-        <main>
-          <section class="card">
-            <h2>Stack principal</h2>
-            <p style="margin: 0; font-weight: 600">
-              Java 17 • Spring Boot 3 • PostgreSQL • Docker • REST APIs • GitHub
-              Actions (CI/CD) • Flyway
-            </p>
-          </section>
+      <!-- SUMMARY -->
+      <section class="section">
+        <h2>Professional Summary</h2>
+        <p>
+          Backend Java Developer specialized in <strong>Java 17</strong> and
+          <strong>Spring Boot 3</strong>, with experience building secure,
+          production-ready REST APIs. Strong knowledge of
+          <strong>Spring Security (JWT, OAuth2, Refresh Tokens)</strong>,
+          database migrations with Flyway, Dockerized deployments, and CI/CD
+          pipelines using GitHub Actions. Focused on backend architecture,
+          security, and scalable system design.
+        </p>
+      </section>
 
-          <section class="card projects" style="margin-top: 12px">
-            <h2>Proyectos personales</h2>
+      <!-- SKILLS -->
+      <section class="section">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Languages:</strong> Java 17</li>
+          <li>
+            <strong>Frameworks:</strong> Spring Boot 3, Spring Security, Spring
+            Data JPA
+          </li>
+          <li>
+            <strong>Security:</strong> JWT, OAuth2, Refresh Tokens, Role-Based
+            Access Control
+          </li>
+          <li><strong>Databases:</strong> PostgreSQL, MySQL, H2, Flyway</li>
+          <li>
+            <strong>DevOps:</strong> Docker, Docker Compose, GitHub Actions
+            (CI/CD)
+          </li>
+          <li><strong>Realtime:</strong> WebSockets (STOMP)</li>
+          <li><strong>Testing:</strong> JUnit 5, MockMvc</li>
+          <li>
+            <strong>Frontend (basic):</strong> HTML5, CSS3, JavaScript (ES6)
+          </li>
+          <li><strong>Other:</strong> OpenAPI / Swagger, REST APIs</li>
+        </ul>
+      </section>
 
-            <article class="project">
-              <h3>Voucher E‑Commerce Platform — Backend Spring Boot 3</h3>
-              <p>
-                Backend para gestión y venta de vouchers digitales con
-                <strong>Java 17</strong> y <strong>Spring Boot</strong>.
-                Integración con pasarela de pagos, webhooks, lógica de caducidad
-                y despliegue con Docker. Pruebas unitarias y documentación
-                OpenAPI.
-              </p>
-              <div class="links">
-                <a href="https://github.com/zuxercoding99/Voucher-Ecommerce"
-                  >GitHub Repository</a
-                >
-              </div>
-            </article>
+      <!-- PROJECTS -->
+      <section class="section">
+        <h2>Personal Projects</h2>
 
-            <article class="project">
-              <h3>Social Media Platform — Full Stack HTML + Spring Boot 3</h3>
-              <p>
-                Aplicación tipo Twitter: autenticación con JWT, posts,
-                comentarios, likes, perfiles, subida de imágenes y chat en
-                tiempo real con WebSockets.
-                <strong>Producción:</strong> migraciones gestionadas con Flyway
-                y pipeline de despliegue automatizado con GitHub Actions
-                (CI/CD). Arquitectura por capas y validaciones de seguridad.
-              </p>
-              <div class="links">
-                <a
-                  href="https://github.com/zuxercoding99/social-media-with-springboot"
-                  >GitHub Repository</a
-                >
-              </div>
-            </article>
-          </section>
+        <h3>Social Media Platform – Full Stack (Spring Boot 3 + Vanilla JS)</h3>
+        <p class="muted">
+          GitHub: https://github.com/zuxercoding99/social-media-with-springboot
+        </p>
+        <ul>
+          <li>
+            Designed and developed a Twitter-like social media platform using
+            <strong>Spring Boot 3</strong>.
+          </li>
+          <li>
+            Implemented secure authentication and authorization with
+            <strong>JWT, OAuth2 login, and Refresh Tokens</strong>.
+          </li>
+          <li>
+            Built REST APIs with role-based access control and ownership
+            validation.
+          </li>
+          <li>
+            Implemented real-time messaging using
+            <strong>WebSockets (STOMP)</strong>.
+          </li>
+          <li>
+            Managed database migrations with <strong>Flyway</strong> and
+            configured production-ready Spring profiles.
+          </li>
+          <li>
+            Dockerized the application and automated CI/CD pipelines using
+            <strong>GitHub Actions</strong>.
+          </li>
+        </ul>
 
-          <section class="card" style="margin-top: 12px">
-            <h2>Educación</h2>
-            <p style="margin: 0; color: var(--muted)">
-              <strong>Licenciatura en Ciencias de la Computación</strong> —
-              Universidad Nacional del Comahue • 2018–Presente
-            </p>
-          </section>
+        <h3>Voucher E-Commerce Platform – Backend (Spring Boot 3)</h3>
+        <p class="muted">
+          GitHub: https://github.com/zuxercoding99/Voucher-Ecommerce
+        </p>
+        <ul>
+          <li>
+            Developed backend services for digital voucher sales using
+            <strong>Spring Boot</strong>.
+          </li>
+          <li>Integrated payment gateway and webhook processing.</li>
+          <li>Implemented voucher expiration and validation business logic.</li>
+          <li>
+            Documented REST APIs with OpenAPI and applied unit/integration
+            testing using <strong>JUnit</strong>.
+          </li>
+        </ul>
+      </section>
 
-          <section class="card" style="margin-top: 12px">
-            <h2>Idiomas</h2>
-            <ul class="clean">
-              <li>Español — Nativo</li>
-              <li>Inglés — B2 (lectura técnica y comunicación básica)</li>
-            </ul>
-          </section>
-        </main>
+      <!-- EDUCATION -->
+      <section class="section">
+        <h2>Education</h2>
+        <p>
+          <strong>Bachelor’s Degree in Computer Science</strong><br />
+          Universidad Nacional del Comahue — 2018 to Present
+        </p>
+      </section>
 
-        <aside>
-          <section class="card">
-            <h2>Habilidades técnicas</h2>
-            <div class="tech-grid" style="margin-top: 8px">
-              <div class="tech">Java 17</div>
-              <div class="tech">Spring Boot 3</div>
-              <div class="tech">Spring Security (JWT)</div>
-              <div class="tech">Spring Data JPA</div>
-              <div class="tech">Flyway (DB migrations)</div>
-              <div class="tech">CI/CD — GitHub Actions</div>
-              <div class="tech">WebSockets</div>
-              <div class="tech">PostgreSQL / MySQL / H2</div>
-              <div class="tech">Docker / Docker Compose</div>
-              <div class="tech">JUnit 5 / MockMvc</div>
-            </div>
-          </section>
+      <!-- LANGUAGES -->
+      <section class="section">
+        <h2>Languages</h2>
+        <ul>
+          <li>Spanish: Native</li>
+          <li>English: B2 (technical reading and basic communication)</li>
+        </ul>
+      </section>
 
-          <section class="card" style="margin-top: 12px">
-            <h2>Buenas prácticas & metodologías</h2>
-            <ul class="clean" style="margin-top: 8px">
-              <li>Manejo centralizado de errores (@RestControllerAdvice)</li>
-              <li>Documentación OpenAPI / Swagger</li>
-              <li>Pruebas automatizadas (unitarias e integración)</li>
-              <li>
-                Perfiles de Spring (dev/test/prod) y migraciones con Flyway
-              </li>
-              <li>Arquitectura en capas, OOP y principios SOLID</li>
-            </ul>
-          </section>
-
-          <section class="card" style="margin-top: 12px">
-            <h2>DevOps & despliegue</h2>
-            <ul class="clean" style="margin-top: 8px">
-              <li>CI/CD con GitHub Actions</li>
-              <li>Docker y despliegue en nube — Cloud deployment</li>
-              <li>Migraciones de base de datos con Flyway</li>
-            </ul>
-          </section>
-        </aside>
-      </div>
-
-      <footer>CV — Ezequiel Falca | Ene 2026</footer>
-    </div>
+      <footer class="footer">CV – Ezequiel Falca | 2026</footer>
+    </main>
   </body>
 </html>
